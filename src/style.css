@@ -1,0 +1,255 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  color-scheme: light;
+
+  /* --- EXACT FRONTEND LIGHT THEME (Rose/Pink Palette) --- */
+
+  /* Backgrounds */
+  --color-bg: #FDFDFD;
+  --bg-color: #FDFDFD;
+
+  --color-panel-bg: #FFFFFF;
+  --color-panel-bg-translucent: rgba(255, 255, 255, 0.75);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+
+  --color-canvas-bg: #FDFDFD;
+  --color-node-bg: #FFFFFF;
+
+  /* Inputs */
+  --color-bg-input: #FDFDFD;
+  --color-input-bg: #FDFDFD;
+
+  /* Buttons */
+  --color-button-bg: #FEF2F2;
+  /* Rose 50 */
+  --color-button-bg-hover: #FEE2E2;
+  /* Rose 100 */
+
+  /* Text */
+  --color-text-primary: #1F2937;
+  /* Gray 800 */
+  --color-text-secondary: #6B7280;
+  /* Gray 500 */
+  --color-text-tertiary: #E5E7EB;
+  /* Gray 200 */
+
+  /* Borders */
+  --color-border: #FEE2E2;
+  /* Rose 100 */
+  --color-border-translucent: rgba(254, 226, 226, 0.7);
+
+  /* Accent (Pink/Rose) */
+  --color-accent: #F43F5E;
+  /* Rose 500 */
+  --accent: #F43F5E;
+
+  --color-accent-hover: #E11D48;
+  /* Rose 600 */
+  --accent-hover: #E11D48;
+
+  --color-accent-soft: #FFE4E6;
+  /* Rose 100 */
+  --color-accent-text: #E11D48;
+  /* Rose 600 */
+  --color-accent-text-strong: #FFFFFF;
+
+  --color-link: #E11D48;
+  /* Rose 600 */
+  --color-shadow: #444444;
+
+  /* Grid (Pink Dots) */
+  --color-grid-dot: rgba(244, 63, 94, 0.1);
+
+  /* Tiers */
+  --color-tier-default: rgba(243, 244, 246, 0.5);
+  --color-tier-1: rgba(254, 226, 226, 0.4);
+  --color-tier-2: rgba(219, 234, 254, 0.4);
+  --color-tier-3: rgba(209, 250, 229, 0.4);
+  --color-tier-4: rgba(254, 243, 199, 0.4);
+  --color-tier-5: rgba(233, 213, 255, 0.4);
+  --color-tier-6: rgba(243, 244, 246, 0.5);
+
+  /* Aurora Highlights */
+  --color-glow-highlight: rgba(255, 255, 255, 0.2);
+  --color-aurora-1: rgba(251, 113, 133, 0.8);
+  --color-aurora-2: rgba(147, 197, 253, 0.8);
+  --color-aurora-3: rgba(221, 214, 254, 0.7);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  overflow: hidden;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes bg-pan-zoom {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes logo-pulse-gentle {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes aurora-flow {
+  0% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+
+  50% {
+    background-position: 100% 50%, 0% 0%, 50% 100%;
+  }
+
+  100% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+}
+
+/* --- UTILITY CLASSES --- */
+
+/* Enhanced Background - Pinkish/White with dots */
+.app-bg {
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle at 1px 1px, var(--color-grid-dot) 1px, transparent 0);
+  background-size: 40px 40px;
+  animation: bg-pan-zoom 60s linear infinite;
+}
+
+/* Glass Panel - White/Translucent with Saturation */
+.glass-panel {
+  background-color: var(--color-panel-bg-translucent) !important;
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border: 1px solid var(--color-border-translucent);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Inputs */
+.form-group input {
+  background-color: var(--color-bg-input);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.form-group input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(244, 63, 94, 0.2);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 15px -3px rgba(244, 63, 94, 0.3);
+}
+
+/* Sidebar/Titlebar */
+.title-bar {
+  background-color: var(--color-panel-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  background-color: var(--color-panel-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.dashboard-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 20px 25px -5px rgba(244, 63, 94, 0.1), 0 10px 10px -5px rgba(244, 63, 94, 0.05);
+}
+
+.card-title {
+  color: var(--color-text-primary);
+}
+
+.card-desc {
+  color: var(--color-text-secondary);
+}
+
+/* Selected Items */
+.selected-element {
+  stroke: var(--color-accent);
+  stroke-width: 2px;
+  filter: drop-shadow(0 0 4px var(--color-accent));
+}
+
+.selected-container {
+  stroke: var(--color-accent);
+}
+
+/* Specific overrides for common text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-primary);
+}
+
+p,
+span,
+div {
+  color: inherit;
+}
+
+/* --- LINK ANIMATIONS --- */
+@keyframes flow {
+  from {
+    stroke-dashoffset: 24;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.link-flow-animated {
+  animation: flow 1s linear infinite;
+}
+
+.link-flow-animated-subtle {
+  animation: flow 3s linear infinite;
+  opacity: 0.7;
+}
+
+.link-flow-animated-reverse {
+  animation: flow 1s linear infinite reverse;
+}

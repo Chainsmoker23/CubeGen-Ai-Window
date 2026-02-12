@@ -1,0 +1,57 @@
+  ΓÇó electron-builder  version=24.13.3 os=10.0.26200
+  ΓÇó loaded configuration  file=C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\electron-builder.json
+  ΓÇó description is missed in the package.json  appPackageFile=C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\package.json
+  ΓÇó author is missed in the package.json  appPackageFile=C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\package.json
+  ΓÇó packaging       platform=win32 arch=x64 electron=30.5.1 appOutDir=release\0.0.0\win-unpacked
+  Γ¿» open : The system cannot find the file specified.
+github.com/develar/app-builder/pkg/icons.LoadImage
+	/Volumes/data/Documents/app-builder/pkg/icons/image-util.go:27
+github.com/develar/app-builder/pkg/icons.loadImage
+	/Volumes/data/Documents/app-builder/pkg/icons/icon-converter.go:334
+github.com/develar/app-builder/pkg/icons.(*InputFileInfo).GetMaxImage
+	/Volumes/data/Documents/app-builder/pkg/icons/icons-api.go:51
+github.com/develar/app-builder/pkg/icons.convertSingleFile
+	/Volumes/data/Documents/app-builder/pkg/icons/icon-converter.go:293
+github.com/develar/app-builder/pkg/icons.doConvertIcon
+	/Volumes/data/Documents/app-builder/pkg/icons/icon-converter.go:247
+github.com/develar/app-builder/pkg/icons.ConvertIcon
+	/Volumes/data/Documents/app-builder/pkg/icons/icon-converter.go:56
+github.com/develar/app-builder/pkg/icons.ConfigureCommand.func1
+	/Volumes/data/Documents/app-builder/pkg/icons/icon-converter.go:33
+github.com/alecthomas/kingpin.(*actionMixin).applyActions
+	/Volumes/data/go/pkg/mod/github.com/alecthomas/kingpin@v2.2.6+incompatible/actions.go:28
+github.com/alecthomas/kingpin.(*Application).applyActions
+	/Volumes/data/go/pkg/mod/github.com/alecthomas/kingpin@v2.2.6+incompatible/app.go:557
+github.com/alecthomas/kingpin.(*Application).execute
+	/Volumes/data/go/pkg/mod/github.com/alecthomas/kingpin@v2.2.6+incompatible/app.go:390
+github.com/alecthomas/kingpin.(*Application).Parse
+	/Volumes/data/go/pkg/mod/github.com/alecthomas/kingpin@v2.2.6+incompatible/app.go:222
+main.main
+	/Volumes/data/Documents/app-builder/main.go:90
+runtime.main
+	/usr/local/Cellar/go/1.17/libexec/src/runtime/proc.go:255
+runtime.goexit
+	/usr/local/Cellar/go/1.17/libexec/src/runtime/asm_amd64.s:1581  
+  Γ¿» C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\app-builder-bin\win\x64\app-builder.exe process failed ERR_ELECTRON_BUILDER_CANNOT_EXECUTE
+Exit code:
+1  failedTask=build stackTrace=Error: C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\app-builder-bin\win\x64\app-builder.exe process failed ERR_ELECTRON_BUILDER_CANNOT_EXECUTE
+Exit code:
+1
+    at ChildProcess.<anonymous> (C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\builder-util\src\util.ts:252:14)
+    at Object.onceWrapper (node:events:633:26)
+    at ChildProcess.emit (node:events:518:28)
+    at ChildProcess.cp.emit (C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\cross-spawn\lib\enoent.js:34:29)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5)
+From previous event:
+    at processImmediate (node:internal/timers:485:21)
+From previous event:
+    at WinPackager.signApp (C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\app-builder-lib\src\winPackager.ts:384:27)
+    at WinPackager.doSignAfterPack (C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\app-builder-lib\src\platformPackager.ts:336:32)
+    at WinPackager.doPack (C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\app-builder-lib\src\platformPackager.ts:321:7)
+    at WinPackager.pack (C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\app-builder-lib\src\platformPackager.ts:140:5)
+    at Packager.doBuild (C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\app-builder-lib\src\packager.ts:445:9)
+    at executeFinally (C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\builder-util\src\promise.ts:12:14)
+    at Packager._build (C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\app-builder-lib\src\packager.ts:379:31)
+    at Packager.build (C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\app-builder-lib\src\packager.ts:340:12)
+    at executeFinally (C:\Users\dives\OneDrive\Desktop\Cubegenai\CubeGen-App\node_modules\builder-util\src\promise.ts:12:14)

@@ -1,0 +1,53 @@
+{
+  "name": "cubegen-windows",
+  "private": true,
+  "version": "1.0.0",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"tsc -p electron/tsconfig.json -w\" \"cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5175 .\\start-electron.bat\"",
+    "build": "tsc -p electron/tsconfig.json && vite build && electron-builder",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@cloud-diagrams/core": "^0.2.2",
+    "@google/genai": "^1.40.0",
+    "@monaco-editor/react": "^4.7.0",
+    "@supabase/supabase-js": "^2.95.3",
+    "clsx": "^2.1.1",
+    "d3": "^7.9.0",
+    "d3-drag": "^3.0.0",
+    "d3-selection": "^3.0.0",
+    "d3-transition": "^3.0.1",
+    "d3-zoom": "^3.0.0",
+    "dom-to-image-more": "^3.7.2",
+    "electron-updater": "^6.7.3",
+    "framer-motion": "^12.34.0",
+    "lucide-react": "^0.563.0",
+    "nanoid": "^5.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/d3-drag": "^3.0.7",
+    "@types/d3-selection": "^3.0.11",
+    "@types/d3-transition": "^3.0.9",
+    "@types/d3-zoom": "^3.0.8",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.24",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^30.0.1",
+    "electron-builder": "^24.13.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "wait-on": "^7.2.0"
+  }
+}
